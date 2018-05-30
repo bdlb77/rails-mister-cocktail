@@ -3,6 +3,6 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.association :ingredient, collection: Ingredient.order(:name) %>
   <%= f.label :description, "Please add a dose" %>
-  <%= f.input :description, placeholder: "3 shots of whiskey" %>
+  <%= f.input :description, placeholder: "3 shots" %>
   <%= f.button :submit %>
 <% end %>
