@@ -1,8 +1,8 @@
 <h1>Add a Dose!</h1>
 
-<%= simple_form_for(@cocktail, @dose) do |f| %>
-  <%= f.label :description,  %>
-  <%= f.input :description  %>
-  <%= f.association :ingredients %>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient, collection: Ingredient.order(:name) %>
+  <%= f.label :description, "Please add a dose" %>
+  <%= f.input :description, placeholder: "3 shots of whiskey" %>
   <%= f.button :submit %>
 <% end %>
