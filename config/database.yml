@@ -9,4 +9,4 @@ development:
 
 test:
   <<: *default
-  database: rails-mister-cocktail_test
+  database: rails-mister-cocktail_tests
