@@ -1,0 +1,33 @@
+.show-h1{
+	color: white;
+
+}
+#showcard{
+	height: 400px;
+	width: 300px;
+}
+.wrapper-show{
+	height: 100vh;
+	display:block;
+	
+}
+
+.delete{
+	border: 1px solid gray;
+	color: black;
+	background: rgba(77,77,77,0.7);
+	padding: 0;
+	margin-left: 10px;
+	box-shadow: 0 1px 1px 0 black;
+}
+
+#doses{
+	display: flex;
+	font-weight: bold;
+	margin-bottom: 30px;
+	justify-content: center;
+}
+
+ul{
+	margin-bottom: 150px;
+}

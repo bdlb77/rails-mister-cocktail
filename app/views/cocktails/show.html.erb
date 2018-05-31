@@ -1,17 +1,23 @@
 
-
-<div class="container">
-	<h1><%= @cocktail.name %></h1>
-
-	<h3>List of Doses in cocktail</h3>
-	<ul>
-		<% @cocktail.doses.each do |dose| %>
-    <li>
-      <%= "#{dose.description} of #{dose.ingredient.name}"%>
-      <%= link_to "delete", dose_path(dose), method: :delete %>
-    </li>
-    <% end %>
-  </ul>
-
-  <%= link_to 'Add a dose!', new_cocktail_dose_path(@cocktail) %>
-</div>	
+<div class="wrapper-show">
+  <h1 class="show-h1"><%= @cocktail.name %></h1>
+  <div class="container">
+    <div class="row">
+      <div class="card" id="showcard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-description">
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+              <li id= "doses">
+                <%= "#{dose.description} of #{dose.ingredient.name}"%>
+                <%= button_to "delete", dose_path(dose), class: "btn btn-sm-primary delete", method: :delete %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <%= link_to new_cocktail_dose_path(@cocktail), class: "card-user" do%>
+          <i class="fas fa-plus-circle"></i>
+        <% end %>    
+      </div>
+    </div>
+  </div>
+</div>
