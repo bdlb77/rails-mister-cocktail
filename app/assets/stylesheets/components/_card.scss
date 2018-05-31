@@ -3,13 +3,15 @@
 }
 .container{
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
+
+
 }
 .card {
   height: 350px;
   width: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  box-shadow: 1px 2px black;
+  box-shadow: 2px 2px black;
   border-radius: 2px;
   background-size: cover !important;
   background-position: center;
@@ -59,3 +61,12 @@
   opacity: 0.1;
 }
 
+ul{
+  color: white;
+  align-content: left;
+
+}
+
+#dose-container {
+  height: 52vh;
+}
