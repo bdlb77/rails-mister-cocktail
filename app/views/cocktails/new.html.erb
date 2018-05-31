@@ -1,10 +1,9 @@
-<h1>Create a Cocktail</h1>
-
-
-<%= simple_form_for(@cocktail) do |f| %>
-
-  <%= f.label :name, "enter name of cocktail" %>
-  <%= f.input :name %>
-  <%= f.label :submit, "Create cocktail" %>
-  <%= f.button :submit %>
-<% end %>
+<div class="wrapper-new">
+  <div class="form-container">
+    <h1>Create a Cocktail</h1>
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
