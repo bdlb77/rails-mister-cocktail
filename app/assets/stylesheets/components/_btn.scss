@@ -1,19 +1,11 @@
-.btn-lg{
-  color: white;
-  text-decoration: none;
-  background-color: white;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: #999999;
-  }
-}
-
-#new_c{
-  text-decoration: none;
+#btn_cocktail{
+	background-color: gray;
+	color: white;
+	border: 1px solid black;
+	box-shadow: 0px 1px black;
+	margin: 20px;
+	padding: 10px;
+	&:hover{
+		opacity: 0.7;
+	}
 }

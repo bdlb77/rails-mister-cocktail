@@ -1,7 +1,5 @@
 <div class="wrapper">
-  <div class= "btn btn-primary btn-lg">
-    <%= link_to 'Create new cocktail!', new_cocktail_path, id: "new_c" %>  
-  </div>
+  <%= button_to 'Create new cocktail!', new_cocktail_path, class: "btn btn-lg-primary", id: "btn_cocktail" %>  
   <div class="container">
     <div class="row">     
       <% @cocktails.each do |cocktail| %>
