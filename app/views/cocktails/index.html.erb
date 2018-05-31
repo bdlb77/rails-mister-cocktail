@@ -1,21 +1,23 @@
-<div class="container">
-  <div class= "btn btn-primary btn-lg  align-center">
+<div class="wrapper">
+  <div class= "btn btn-primary btn-lg">
     <%= link_to 'Create new cocktail!', new_cocktail_path, id: "new_c" %>  
   </div>
-  <div class="row">     
-    <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail) do%>
-        <div class="col-xs-12 col-sm-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');"> 
-            <div class="card-category">Popular</div>
-            <div class="card-description">
-              <h2><%= cocktail.name %></h2>
+  <div class="container">
+    <div class="row">     
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail) do%>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');"> 
+              <div class="card-category">Popular</div>
+              <div class="card-description">
+                <h2><%= cocktail.name %></h2>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
             </div>
-            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
