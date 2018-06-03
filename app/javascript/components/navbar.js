@@ -1,12 +1,24 @@
 function initUpdateNavbarOnScroll() {
-  const navbar = document.querySelector('.navbar-wagon');
-  if (navbar) { 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add('navbar-wagon-white');
-      } else {
-        navbar.classList.remove('navbar-wagon-white');
-      }
-    });
-  }
+  var mywindow = $(window);
+  var mypos = mywindow.scrollTop();
+  var up = false;
+  var newscroll;
+
+  mywindow.scroll(function() {
+    newscroll = mywindow.scrollTop();
+    if (newscroll > mypos && !up) {
+      $('.navbar-wagon').stop().fade();
+      up = !up;
+      console.log(up);
+    } else if(newscroll < mypos && up) {
+      $('.navbar-wagon').stop().fadeIn();
+      up = !up;
+    }
+    mypos = newscroll;
+  });
 }
+export { initUpdateNavbarOnScroll };
+
+
+
+
