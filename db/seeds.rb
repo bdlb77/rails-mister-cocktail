@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 require 'json'
+
+
+Cocktail.destroy_all
+
 puts "commencing seed."
 request_uri = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 url = "#{request_uri}"
